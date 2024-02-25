@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Database\Factories;
+namespace Jaymeh\FilamentDynamicBuilder\Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
