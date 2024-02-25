@@ -35,8 +35,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Jaymeh\\FilamentDynamicBuilder\\": "src/",
-            "Jaymeh\\FilamentDynamicBuilder\\Database\\Factories\\": "database/factories/"
+            "Jaymeh\\FilamentDynamicBuilder\\": "src/"
         }
     },
     "autoload-dev": {
@@ -61,10 +60,7 @@
         "laravel": {
             "providers": [
                 "Jaymeh\\FilamentDynamicBuilder\\FilamentDynamicBuilderServiceProvider"
-            ],
-            "aliases": {
-                "FilamentDynamicBuilder": "Jaymeh\\FilamentDynamicBuilder\\Facades\\FilamentDynamicBuilder"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
