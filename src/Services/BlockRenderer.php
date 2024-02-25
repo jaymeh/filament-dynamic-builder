@@ -22,7 +22,7 @@ class BlockRenderer
 
         return collect($content)->map(
             function (array $block) use ($pageContentBlockViewsEvent) {
-                if (! isset($block['layout'])) {
+                if (! isset($block['type'])) {
                     return null;
                 }
 
