@@ -19,7 +19,7 @@ class PageContentEvent
     /**
      * Constructor for class.
      *
-     * @param Builder $builder Main builder instance.
+     * @param  Builder  $builder  Main builder instance.
      */
     public function __construct(private Builder $builder)
     {

@@ -10,9 +10,6 @@ class PageContentBlockAttributesEvent
 
     /**
      * Constructor for class.
-     *
-     * @param string $name
-     * @param array $attributes
      */
     public function __construct(protected string $name, public array $attributes)
     {
@@ -20,8 +17,6 @@ class PageContentBlockAttributesEvent
 
     /**
      * Returns the name of the component.
-     *
-     * @return string
      */
     public function getName(): string
     {

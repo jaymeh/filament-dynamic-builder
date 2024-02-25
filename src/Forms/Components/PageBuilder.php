@@ -9,8 +9,6 @@ class PageBuilder extends Builder
 {
     /**
      * Handles dynamic registration of Builder Blocks.
-     *
-     * @return void
      */
     public function setUp(): void
     {
@@ -33,8 +31,7 @@ class PageBuilder extends Builder
     /**
      * Excludes blocks by name.
      *
-     * @param array $blocks Layout names to exclude.
-     *
+     * @param  array  $blocks  Layout names to exclude.
      * @return self
      */
     public function exclude(array $blocks)

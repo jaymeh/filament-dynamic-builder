@@ -3,17 +3,16 @@
 namespace Jaymeh\FilamentDynamicBuilder\Services;
 
 use Illuminate\Support\Collection;
-use Jaymeh\FilamentDynamicBuilder\PageContentBlock;
-use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockViewsEvent;
 use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockAttributesEvent;
+use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockViewsEvent;
+use Jaymeh\FilamentDynamicBuilder\PageContentBlock;
 
 class BlockRenderer
 {
     /**
      * Renders a block.
      *
-     * @param Collection $content The content to render.
-     *
+     * @param  Collection  $content  The content to render.
      * @return \Illuminate\Support\Collection<\Jaymeh\FilamentDynamicBuilder\PageContentBlock>
      */
     public function render(Collection $content)
@@ -23,11 +22,11 @@ class BlockRenderer
 
         return $content->map(
             function (array $block) use ($pageContentBlockViewsEvent) {
-                if (!isset($block['layout'])) {
+                if (! isset($block['layout'])) {
                     return null;
                 }
 
-                if (!isset($pageContentBlockViewsEvent->views[$block['type']])) {
+                if (! isset($pageContentBlockViewsEvent->views[$block['type']])) {
                     return null;
                 }
 
@@ -47,8 +46,6 @@ class BlockRenderer
     /**
      * Fires off a pre-render event.
      *
-     * @param string $name
-     * @param array $attributes
      *
      * @return array
      */

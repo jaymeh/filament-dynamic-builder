@@ -20,9 +20,6 @@ class PageContentBlock
 
     /**
      * Constructor for class.
-     *
-     * @param string $view
-     * @param array $attributes
      */
     public function __construct(string $view, array $attributes)
     {

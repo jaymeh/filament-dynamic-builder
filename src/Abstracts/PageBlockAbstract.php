@@ -2,11 +2,11 @@
 
 namespace Jaymeh\FilamentDynamicBuilder\Abstracts;
 
-use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockAttributesEvent;
-use Illuminate\Support\Facades\Event;
-use Jaymeh\FilamentDynamicBuilder\Events\PageContentEvent;
-use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockViewsEvent;
 use Filament\Forms\Components\Builder\Block;
+use Illuminate\Support\Facades\Event;
+use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockAttributesEvent;
+use Jaymeh\FilamentDynamicBuilder\Events\PageContentBlockViewsEvent;
+use Jaymeh\FilamentDynamicBuilder\Events\PageContentEvent;
 
 /**
  * Page Block class used to define a Page Block.
@@ -61,10 +61,6 @@ abstract class PageBlockAbstract
 
     /**
      * Allows you to manipulate and set additional view attributes prior to rendering the block.
-     *
-     * @param array $attributes
-     *
-     * @return array
      */
     protected function attributes(array $attributes): array
     {
