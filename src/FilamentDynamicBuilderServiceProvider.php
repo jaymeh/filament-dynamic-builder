@@ -21,11 +21,4 @@ class FilamentDynamicBuilderServiceProvider extends PackageServiceProvider
         $package->name(static::$name)
             ->hasViews(self::$viewNamespace);
     }
-
-    public function register() {
-        parent::register();
-
-        new TestPageBlock();
-        new SecondTestPageBlock;
-    }
 }
