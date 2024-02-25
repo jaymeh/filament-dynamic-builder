@@ -12,15 +12,15 @@ class BlockRenderer
     /**
      * Renders a block.
      *
-     * @param  Collection  $content  The content to render.
+     * @param  Collection|array  $content  The content to render.
      * @return \Illuminate\Support\Collection<\Jaymeh\FilamentDynamicBuilder\PageContentBlock>
      */
-    public function render(Collection $content)
+    public function render($content)
     {
         $pageContentBlockViewsEvent = new PageContentBlockViewsEvent();
         event($pageContentBlockViewsEvent);
 
-        return $content->map(
+        return collect($content)->map(
             function (array $block) use ($pageContentBlockViewsEvent) {
                 if (! isset($block['layout'])) {
                     return null;
